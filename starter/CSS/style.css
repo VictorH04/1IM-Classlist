@@ -61,9 +61,85 @@ body {
 
 .topsection {
   height: 35vh;
+  width: 35vw;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  border-bottom: var(--border-bottom-7);
+  border-left: var(--border-bottom-7);
+  margin: 4rem 4rem 0rem 4rem; }
   .topsection-title {
     color: #fff;
-    font-size: var(--fs-heading); }
+    font-size: var(--fs-heading-medium); }
+
+.settingsection {
+  height: 20vh;
+  width: 100vw;
+  margin-top: 20rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; }
+  .settingsection-title {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem 4rem;
+    font-size: var(--fs-title); }
+  .settingsection-form {
+    width: 30vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .settingsection-form_nameContainer {
+      margin-left: 4rem;
+      align-content: center; }
+      .settingsection-form_nameContainer--nameTitle {
+        font-size: var(--fs-text);
+        margin-right: 1rem; }
+    .settingsection-form_classContainer {
+      margin-left: 4rem;
+      justify-content: start;
+      align-content: center; }
+      .settingsection-form_classContainer--classTitle {
+        font-size: var(--fs-text);
+        margin-right: 1rem; }
+
+.settingsectionHome {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 30vh;
+  width: 100vw;
+  background-color: #fff;
+  margin-top: 20rem; }
+  .settingsectionHome-title {
+    font-size: var(--fs-heading);
+    justify-self: center;
+    align-self: center; }
+  .settingsectionHome-classBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / 2;
+    width: 20rem;
+    height: 5rem; }
+  .settingsectionHome-apiBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / 2;
+    width: 20rem;
+    height: 5rem; }
+
+.btn {
+  font-family: 'Saira';
+  font-size: var(--fs-text-big);
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+  padding: 2rem 2rem;
+  background-color: var(--primary-green);
+  border: none;
+  color: #fff;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-1rem);
+  box-shadow: var(--shadow-light-4); }
