@@ -1,0 +1,12 @@
+.topsection {
+    height: 35vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+        color: #fff;
+        font-size: var(--fs-heading);
+    }
+}
