@@ -18,20 +18,18 @@
 }
 
 .settingsection {
-    height: 20vh;
+    height: 25vh;
     width: 100vw;
 
     margin-top: 20rem;
 
     background-color: #fff;
 
-    display: flex;
-    flex-direction: column;
 
     &-title {
         display: flex;
         justify-content: flex-start;
-        margin: 2rem 4rem;
+        padding: 2rem 4rem;
         font-size: var(--fs-title);
     }
 
@@ -40,35 +38,55 @@
         
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
 
-        &_nameContainer {
-            margin-left: 4rem;
-            align-content: center;
+       
             
 
-            &--nameTitle {
-                font-size: var(--fs-text);
-                margin-right: 1rem;
-            }
-            &--select {
-    
-            }
-        }
+            &_nameTitle {
+                font-size: var(--fs-text-big);
+                margin-left: 4rem;
 
-        &_classContainer {
-            margin-left: 4rem;
-            justify-content: start;
-            align-content: center;
+                align-self: center;
+                grid-column: 1 / 1;
+                grid-row: 1 / 1;
+            }
 
-            &--classTitle {
-                font-size: var(--fs-text);
-                margin-right: 1rem;
+            &_name {
+                height: 75%;
+                width: 75%;
+
+                border: var(--border-3);
+                padding: 1rem 1rem;
+                margin-left: 4rem;
+                font-size: var(--fs-text-big);
+                font-family: 'Saira';
+
+                align-self: center;
+                grid-column: 1 / 1;
+                grid-row: 2 / 2;
+            }
+
+       
+
+            &_classTitle {
+                font-size: var(--fs-text-big);
+                margin-left: 4rem;
+                
+                align-self: center;
+                grid-column: 2 / 2;
+                grid-row: 1 / 1;
             }
     
-            &--select {
-    
+            &_select {
+                height: 50%;
+                width: 50%;
+                
+                align-self: center;
+                margin-left: 4rem;
+                grid-column: 2 / 2;
+                grid-row: 2 / 2;
             }
-        }
 
     }
 }
@@ -131,4 +149,66 @@
 .btn:hover {
     transform: translateY(-1rem);
     box-shadow: var(--shadow-light-4);
+}
+
+.cardsection {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    
+
+    &-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        height: 15vh;
+        width: 20vw;
+
+        margin-top: 7.5rem;
+        margin-left: 4rem;
+
+
+        box-shadow: var(--shadow-dark-2);
+        border-bottom: var(--border-bottom-7);
+        border-left: var(--border-bottom-7);
+
+        &--title {
+            margin-left: 1rem;
+            
+            color: #fff;
+            
+            align-self: center;
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+        }
+
+        &--bornIn {
+            font-size: var(--fs-text);
+            color: #fff;
+
+            margin-left: 1rem;
+
+            align-self: center;
+            grid-column: 1 / 1;
+            grid-row: 2 / 2;
+        }
+
+        &--className {
+            font-size: var(--fs-text);
+            color: #fff;
+
+            margin-left: 1rem;
+
+            align-self: center;
+            grid-column: 2 / 2;
+            grid-row: 2 / 2;
+        }
+    }
+    
+    &-card:last-of-type {
+        margin-bottom: 7.5rem;
+    }
+
 }
