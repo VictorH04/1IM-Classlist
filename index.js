@@ -1,50 +1,46 @@
 // ! Search filter
 
 (function() {
-    
-    let form = document.querySelector('.settingsection-form');
-    
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-    })
-        
-    const searchInput = document.getElementById('searchInput');
-    
-    //eventlistener
-    searchInput.addEventListener('keyup', function(event) {
+	let form = document.querySelector('.settingsection-form');
 
-        // getting the searchvalue 
-        let searchValue = searchInput.value.trim(); 
+	form.addEventListener('submit', (event) => {
+		event.preventDefault();
+	});
 
-        
-        // selecting all the cardtitles
-        const cardsTitle = document.querySelectorAll('.cardsection-card--title');
+	const searchInput = document.getElementById('searchInput');
 
-        const wholeCard = document.querySelectorAll('.cardsection-card');
-        
-        
-        // looping through all the items
-        [].forEach.call(cardsTitle, (card) => {
-            
-            let cardsTitleValue = card.innerHTML;
-            
-            console.log(cardsTitleValue);
+	//eventlistener
+	searchInput.addEventListener('keyup', function(event) {
+		// getting the searchvalue
+		let searchValue = searchInput.value.trim();
 
-            let type = card.dataset = cardsTitleValue;
+		// selecting all the cardtitles
+		const cardsTitle = document.querySelectorAll('.cardsection-card--title');
 
-            console.log(type);
+		const wholeCard = document.querySelectorAll('.cardsection-card');
 
-            // Length of the input value
-            let length = searchValue.length;
+		// looping through all the items
+		[].forEach.call(cardsTitle, (card) => {
+			let cardsTitleValue = card.innerHTML;
 
-            let match = type.slice(0, length);
+			// console.log(cardsTitleValue);
 
-            if (searchValue === match) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    })
+			let type = (wholeCard.dataset = cardsTitleValue);
 
-}) ();
+			console.log(searchValue);
+
+			console.log(type);
+
+			// Length of the input value
+			let length = searchValue.length;
+
+			let match = type.slice(0, length);
+
+			if (searchValue === match) {
+				card.parentElement.style.display = 'block';
+			} else {
+				card.parentElement.style.display = 'none';
+			}
+		});
+	});
+})();
