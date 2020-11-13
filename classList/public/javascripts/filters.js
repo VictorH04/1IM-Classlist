@@ -1,11 +1,11 @@
 // ! Search filter
 
 (function() {
-	// let form = document.querySelectorAll('.settingsection-form');
+	const form = document.querySelector('.settingsection-form');
 
-	// form.addEventListener('submit', (event) => {
-	// 	event.preventDefault();
-	// });
+	form.addEventListener('submit', (event) => {
+		event.preventDefault();
+	});
 
 	const searchInput = document.getElementById('searchInput');
 

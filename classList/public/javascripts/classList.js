@@ -3,9 +3,6 @@ const fs = require('fs');
 const http = require('http');
 const url = require('url');
 
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
-
 // Modules
 const replaceTemplate = require('./starter/modules/replaceTemplate');
 
@@ -29,11 +26,6 @@ const server = http.createServer((req, res) => {
 	// home page
 	if (pathname === '/' || pathname === '/home') {
 		res.writeHead(200, { 'Content-type': 'html' });
-
-		// const classListHtml = dataObj.map((el) => replaceTemplate(tempClassList, el)).join('');
-		const output = tempHome;
-
-		console.log(tempHome);
 
 		res.end(output);
 	}

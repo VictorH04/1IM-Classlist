@@ -6,6 +6,7 @@ const path = require('path');
 
 let app = express();
 app.use(express.static(path.resolve('../classList/public/stylesheets')));
+app.use(express.static('public/javascripts'));
 
 let server = http.createServer(app);
 
@@ -17,7 +18,6 @@ app.get('/', (req, res) => {
 
 app.get('/classlist', (req, res) => {
 	res.sendFile(path.resolve('../classList/views/template-classlist.html'));
-	let filterProgram = require('../public/javascripts/filters');
 });
 
 // app.get('/home', (req, res) => {
