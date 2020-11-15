@@ -3,4 +3,6 @@ module.exports = (temp, product) => {
 	output = output.replace(/{%BIRTH%}/g, product.BIRTH);
 	output = output.replace(/{%CLASS%}/g, product.CLASS);
 	output = output.replace(/{%id%}/g, product.id);
+
+	return output;
 };

@@ -9,6 +9,25 @@
 
 	const searchInput = document.getElementById('searchInput');
 
+	const select = document.querySelector('.settingsection-form_select');
+
+	const wholeCard = document.querySelectorAll('.cardsection-card');
+
+	const cardClass = document.querySelector('.cardsection-card--className');
+
+	[].forEach.call(wholeCard, (card) => {
+		let children = select.children;
+		console.log(children);
+
+		for (let i = 0; i < children.length; i++) {
+			if (children[0]) {
+				card.style.display = 'block';
+			} else if (children[1]) {
+				card.parentElement.style.display = 'none';
+			}
+		}
+	});
+
 	//eventlistener
 	searchInput.addEventListener('keyup', function(event) {
 		// getting the searchvalue
@@ -27,9 +46,9 @@
 
 			let type = (wholeCard.dataset = cardsTitleValue);
 
-			console.log(searchValue);
+			// console.log(searchValue);
 
-			console.log(type);
+			// console.log(type);
 
 			// Length of the input value
 			let length = searchValue.length;

@@ -34,9 +34,9 @@
 
     <select name="class" id="class" class="settingsection-form_select">
 
-         <option value="first"></option>
-         <option value="A" id="optionA">A</option>
-         <option value="B" id="optionB">B</option>
+         <option value="first" id="optionNull" class="optionNull"></option>
+         <option value="A" id="optionA" class="optionA">A</option>
+         <option value="B" id="optionB" class="optionB">B</option>
         
     </select>
 
@@ -45,14 +45,15 @@
 </div>
 
 <div class="cardsection">
-
-<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
-    <h1 class="cardsection-card--title">{%NAME%}</h1>
-
-    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
     
+{%CONTENT%}
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+<!-- <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
+    <h1 class="cardsection-card--title">{%NAME%}</h1>
+
+    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
+
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
 
@@ -61,7 +62,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
 
@@ -70,7 +71,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
 
@@ -79,7 +80,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
 
@@ -88,7 +89,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
 
@@ -97,16 +98,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
-
-</div>
-
-<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
-    <h1 class="cardsection-card--title">{%NAME%}</h1>
-
-    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
-
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
     
@@ -116,7 +108,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
 </div>
 
@@ -125,16 +117,8 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
 
-    <p class="cardsection-card--className">{%CLASS%}</p>
+    <p class="cardsection-card--className classA">{%CLASS%}</p>
 
-</div>
-
-<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
-    <h1 class="cardsection-card--title">{%NAME%}</h1>
-
-    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
-        
-        <p class="cardsection-card--className">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -142,7 +126,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classA">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -150,7 +134,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classA">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -158,7 +142,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classA">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -166,7 +150,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classA">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -174,7 +158,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classA">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -182,7 +166,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classA">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -190,7 +174,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -198,7 +182,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -206,7 +190,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -214,7 +198,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -222,15 +206,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
-</div>
-
-<div class="cardsection-card"->
-    <h1 class="cardsection-card--title">{%NAME%}</h1>
-
-    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
-
-    <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -238,7 +214,15 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
+</div>
+
+<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
+    <h1 class="cardsection-card--title">{%NAME%}</h1>
+
+    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
+
+    <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -246,15 +230,7 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
-</div>
-
-<div class="cardsection-card"->
-    <h1 class="cardsection-card--title">{%NAME%}</h1>
-
-    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
-
-    <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
@@ -262,18 +238,10 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
-    <h1 class="cardsection-card--title">{%NAME%}</h1>
-
-    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
-        
-        <p class="cardsection-card--className">{%CLASS%}</p>
-</div>
-
-<div class="cardsection-card"->
     <h1 class="cardsection-card--title">{%NAME%}</h1>
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
@@ -286,16 +254,40 @@
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
 
 <div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
-    <h1 class="cardsection-card--title">{%NAME3%}</h1>
+    <h1 class="cardsection-card--title">{%NAME%}</h1>
 
     <p class="cardsection-card--bornIn">{%BIRTH%}</p>
         
-        <p class="cardsection-card--className">{%CLASS%}</p>
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
 </div>
+
+<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
+    <h1 class="cardsection-card--title">{%NAME%}</h1>
+
+    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
+
+    <p class="cardsection-card--className classB">{%CLASS%}</p>
+</div>
+
+<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
+    <h1 class="cardsection-card--title">{%NAME%}</h1>
+
+    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
+        
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
+</div>
+
+<div class="cardsection-card card" id="{%ID%}" value="nameOfPerson">
+    <h1 class="cardsection-card--title">{%NAME%}</h1>
+
+    <p class="cardsection-card--bornIn">{%BIRTH%}</p>
+        
+        <p class="cardsection-card--className classB">{%CLASS%}</p>
+</div>  -->
 
 </div>
 
