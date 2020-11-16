@@ -9,24 +9,90 @@
 
 	const searchInput = document.getElementById('searchInput');
 
-	const select = document.querySelector('.settingsection-form_select');
+	const select = document.getElementById('classSelect');;
 
 	const wholeCard = document.querySelectorAll('.cardsection-card');
 
-	const cardClass = document.querySelector('.cardsection-card--className');
+	const cardClass = document.getElementById('cardClass');
+
+	const cardSection = document.querySelector('.cardsection');
+
+	// function classFilter (noClass, A, B) {
+	// 	let selectedValue = select.options[select.selectedIndex].value;
+
+	// 	console.log(cardClass.textContent);
+
+	// 	if (cardClass.textContent = '1IMA') {
+			
+	// 		if (selectedValue = 'A') {
+	// 			cardClass.parentElement.style.display = 'none';
+	// 		}
+	// 	}
+
+		
+	// 	noClass = select.children[0];
+	// 	A = select.children[1];
+	// 	B = select.children[2];
+	// 	console.log(A, B, noClass);
+
+	// 	console.log(A.value);
+	// 	console.log(cardClass.parentElement);
+
+	// 	if (select.children[1] = selected) {
+	// 		if (cardClass.textContent = '1IMA') {
+	// 			cardClass.parentElement.style.display = 'none';
+	// 		}
+
+	// 	}
+
+	// }
+	let classTitleValue = cardSection.children;
+	console.log(classTitleValue);
+	
+	let selectedValue = select.options;
+	console.log(selectedValue);
 
 	[].forEach.call(wholeCard, (card) => {
-		let children = select.children;
-		console.log(children);
+		
+		
+		if (classTitleValue.innerText === '1IMA') {
+			
+			if (selectedValue.value === 'first') {
+				card.style.display = 'grid';
+			} 
+			else if (selectedValue.value === 'valA') {
+				card.style.display = 'grid';
+			} 
+			else if (selectedValue.value === 'valB') {
+				card.style.display = 'none';
+			}
+			
+		} else if (classTitleValue.innerText === '1IMB') {
 
-		for (let i = 0; i < children.length; i++) {
-			if (children[0]) {
-				card.style.display = 'block';
-			} else if (children[1]) {
-				card.parentElement.style.display = 'none';
+			if (selectedValue.value === 'first') {
+				card.style.display = 'grid';
+			} 
+			else if (selectedValue.value === 'valA') {
+				card.style.display = 'none';
+			} 
+			else if (selectedValue.value === 'valB') {
+				card.style.display = 'grid';
 			}
 		}
-	});
+	})
+
+	// [].forEach.call(wholeCard, (card) => {
+	// 	let children = select.children;
+	// 	console.log(children);
+
+	// 	for (let i = 0; i < children.length; i++) {
+	// 		if (children.select = 'A') {
+	// 			card.style.display = 'none';
+	// 		} else if (children[1]) {
+	// 			card.parentElement.style.display = 'none';
+	// 		}
+	// 	}
+	// });
 
 	//eventlistener
 	searchInput.addEventListener('keyup', function(event) {
