@@ -9,7 +9,7 @@
 
 	const searchInput = document.getElementById('searchInput');
 
-	const select = document.getElementById('classSelect');;
+	const select = document.getElementById('classSelect');
 
 	const wholeCard = document.querySelectorAll('.cardsection-card');
 
@@ -46,40 +46,46 @@
 	// 	}
 
 	// }
-	let classTitleValue = cardSection.children;
+	let classTitleValue = wholeCard;
 	console.log(classTitleValue);
 	
 	let selectedValue = select.options;
-	console.log(selectedValue);
-
-	[].forEach.call(wholeCard, (card) => {
+	console.log(select.children[1]);
+	
+	for (let i = 0; i < classTitleValue.length; i++) {
 		
-		
-		if (classTitleValue.innerText === '1IMA') {
+		if (classTitleValue[i].children[2].textContent === '1IMA') {
 			
+			if (select.children[0].classList.contains('optionNull')) {
+				classTitleValue[i].style.display = 'grid';
+			} 
+			else if (select.children[0].classList.contains('optionA') === 'A') {
+				classTitleValue[i].style.display = 'grid';
+			} 
+			else if (select.children[0].classList.contains('optionB') === 'B') {
+				classTitleValue[i].style.display = 'none';	
+			}
+			
+			
+		} else if (classTitleValue[i].children[2].textContent === '1IMB') {
+
 			if (selectedValue.value === 'first') {
 				card.style.display = 'grid';
 			} 
 			else if (selectedValue.value === 'valA') {
-				card.style.display = 'grid';
+				card.style.display = 'none';
 			} 
 			else if (selectedValue.value === 'valB') {
-				card.style.display = 'none';
+				card.style.display = 'grid';
 			}
 			
-		} else if (classTitleValue.innerText === '1IMB') {
-
-			if (selectedValue.value === 'first') {
-				card.style.display = 'grid';
-			} 
-			else if (selectedValue.value === 'valA') {
-				card.style.display = 'none';
-			} 
-			else if (selectedValue.value === 'valB') {
-				card.style.display = 'grid';
-			}
 		}
-	})
+		
+		console.log(select.children[0].classList.contains('optionNull'));
+	}
+	// [].forEach.call(cardSection, (card) => {
+		
+	// });
 
 	// [].forEach.call(wholeCard, (card) => {
 	// 	let children = select.children;
