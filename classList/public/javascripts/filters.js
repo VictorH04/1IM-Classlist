@@ -23,13 +23,12 @@
 	// 	console.log(cardClass.textContent);
 
 	// 	if (cardClass.textContent = '1IMA') {
-			
+
 	// 		if (selectedValue = 'A') {
 	// 			cardClass.parentElement.style.display = 'none';
 	// 		}
 	// 	}
 
-		
 	// 	noClass = select.children[0];
 	// 	A = select.children[1];
 	// 	B = select.children[2];
@@ -48,43 +47,33 @@
 	// }
 	let classTitleValue = wholeCard;
 	console.log(classTitleValue);
-	
+
 	let selectedValue = select.options;
 	console.log(select.children[1]);
-	
-	for (let i = 0; i < classTitleValue.length; i++) {
-		
-		if (classTitleValue[i].children[2].textContent === '1IMA') {
-			
-			if (select.children[0].classList.contains('optionNull')) {
-				classTitleValue[i].style.display = 'grid';
-			} 
-			else if (select.children[0].classList.contains('optionA') === 'A') {
-				classTitleValue[i].style.display = 'grid';
-			} 
-			else if (select.children[0].classList.contains('optionB') === 'B') {
-				classTitleValue[i].style.display = 'none';	
-			}
-			
-			
-		} else if (classTitleValue[i].children[2].textContent === '1IMB') {
 
-			if (selectedValue.value === 'first') {
-				card.style.display = 'grid';
-			} 
-			else if (selectedValue.value === 'valA') {
-				card.style.display = 'none';
-			} 
-			else if (selectedValue.value === 'valB') {
-				card.style.display = 'grid';
+	for (let i = 0; i < classTitleValue.length; i++) {
+		if (classTitleValue[i].children[2].textContent === '1IMA') {
+			if (select.options[i].text === '') {
+				classTitleValue[i].style.display = 'grid';
+			} else if (select.options[i].text === 'A') {
+				classTitleValue[i].style.display = 'grid';
+			} else if (select.options[i].text === 'B') {
+				classTitleValue[i].style.display = 'none';
 			}
-			
+		} else if (classTitleValue[i].children[2].textContent === '1IMB') {
+			if (select.options[i].value === 'first') {
+				classTitleValue[i].style.display = 'grid';
+			} else if (select.options[i].textvalue === 'valA') {
+				classTitleValue[i].style.display = 'none';
+			} else if (select.options[i].textvalue === 'valB') {
+				classTitleValue[i].style.display = 'grid';
+			}
 		}
-		
-		console.log(select.children[0].classList.contains('optionNull'));
+
+		console.log(select.options[i].text);
 	}
 	// [].forEach.call(cardSection, (card) => {
-		
+
 	// });
 
 	// [].forEach.call(wholeCard, (card) => {
