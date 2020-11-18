@@ -45,33 +45,89 @@
 	// 	}
 
 	// }
+
 	let classTitleValue = wholeCard;
 	console.log(classTitleValue);
 
 	let selectedValue = select.options;
-	console.log(select.children[1]);
+	console.log(select.children[0].textContent = '');
 
-	for (let i = 0; i < classTitleValue.length; i++) {
-		if (classTitleValue[i].children[2].textContent === '1IMA') {
-			if (select.options[i].text === '') {
-				classTitleValue[i].style.display = 'grid';
-			} else if (select.options[i].text === 'A') {
-				classTitleValue[i].style.display = 'grid';
-			} else if (select.options[i].text === 'B') {
-				classTitleValue[i].style.display = 'none';
-			}
-		} else if (classTitleValue[i].children[2].textContent === '1IMB') {
-			if (select.options[i].value === 'first') {
-				classTitleValue[i].style.display = 'grid';
-			} else if (select.options[i].textvalue === 'valA') {
-				classTitleValue[i].style.display = 'none';
-			} else if (select.options[i].textvalue === 'valB') {
-				classTitleValue[i].style.display = 'grid';
-			}
+	// for (let i = 0; i < wholeCard.length; i++) {
+
+	// 	if (wholeCard[i].children[2].textContent === '1IMA') {
+
+	// 		if (select.children[0].textContent === '') {
+	// 			wholeCard[i].style.display = 'grid';
+
+	// 		} else if (select.children[1].textContent === 'A') {
+	// 			wholeCard[i].style.display = 'grid';
+
+	// 		} else if (select.children[2].textContent === 'B') {
+	// 			wholeCard[i].style.display = 'none';
+	// 		}
+
+	// 	} else if (wholeCard[i].children[2].textContent === '1IMB') {
+			
+	// 		if (select.children[0].textContent === '') {
+	// 			wholeCard[i].style.display = 'grid';
+
+	// 		} else if (select.children[0].textContent === 'A') {
+	// 			wholeCard[i].style.display = 'none';
+
+	// 		} else if (select.children[0].textContent === 'B') {
+	// 			wholeCard[i].style.display = 'grid';
+	// 		}
+	// 	}
+
+	// 	// console.log(select.options[i].active);
+	// }
+
+	for (let i = 0; i < wholeCard.length; i++) {
+
+		if (select.children[0].activeElement === true) {
+			
+			wholeCard[i].children[2].textContent === '1IMA'
+				wholeCard[i].style.display = 'grid';			
+			
+
+		} else if (select.children[1].activeElement === true) {
+			
+			wholeCard[i].children[2].textContent === '1IMA'
+				wholeCard[i].style.display = 'grid';			
+			
+
+		} else if (select.children[2].activeElement === true) {
+
+			wholeCard[i].children[2].textContent === '1IMA'
+				wholeCard[i].style.display = 'none';			
+
 		}
+		
 
-		console.log(select.options[i].text);
+		if (select.children[0].textContent === '') {
+
+				wholeCard[i].children[2].textContent === '1IMB'
+				wholeCard[i].style.display = 'grid';			
+		
+
+		} else if (select.children[0].textContent === 'A') {
+
+			wholeCard[i].children[2].textContent === '1IMB'
+				wholeCard[i].style.display = 'none';			
+			
+
+		} else if (select.children[0].textContent === 'B') {
+	
+			wholeCard[i].children[2].textContent === '1IMB'
+				wholeCard[i].style.display = 'grid';			
+		
+	
+		} 
+
+		console.log(select.children[i]);
 	}
+
+
 	// [].forEach.call(cardSection, (card) => {
 
 	// });
@@ -92,7 +148,7 @@
 	//eventlistener
 	searchInput.addEventListener('keyup', function(event) {
 		// getting the searchvalue
-		let searchValue = searchInput.value.trim();
+		let searchValue = searchInput.value.trim().toLowerCase();
 
 		// selecting all the cardtitles
 		const cardsTitle = document.querySelectorAll('.cardsection-card--title');
@@ -114,7 +170,7 @@
 			// Length of the input value
 			let length = searchValue.length;
 
-			let match = type.slice(0, length);
+			let match = type.slice(0, length).toLowerCase();
 
 			if (searchValue === match) {
 				card.parentElement.style.display = 'block';

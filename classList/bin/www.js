@@ -29,11 +29,11 @@ app.get('/', (req, res) => {
 	res.sendFile(path.resolve('../classList/views/template-home.html'));
 });
 
-app.get('/home', (req, res) => {
+app.get('/hjem', (req, res) => {
 	res.sendFile(path.resolve('../classList/views/template-home.html'));
 });
 
-app.get('/classlist', (req, res) => {
+app.get('/klasseliste', (req, res) => {
 	res.sendFile(path.resolve('../classList/views/template-classlist.html'));
 
 	// console.log(req.url);
@@ -55,6 +55,8 @@ app.get('/classlist', (req, res) => {
 app.get('/api', (req, res) => {
 	res.sendFile(path.resolve('../classList/data.json'));
 });
+
+
 
 // app.get('/home', (req, res) => {
 // 	res.sendFile(tempHome);
