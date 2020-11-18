@@ -17,40 +17,34 @@
 
 	const cardSection = document.querySelector('.cardsection');
 
-	// function classFilter (noClass, A, B) {
-	// 	let selectedValue = select.options[select.selectedIndex].value;
+	select.addEventListener('change', intuitiveFilter);
 
-	// 	console.log(cardClass.textContent);
-
-	// 	if (cardClass.textContent = '1IMA') {
-
-	// 		if (selectedValue = 'A') {
-	// 			cardClass.parentElement.style.display = 'none';
-	// 		}
-	// 	}
-
-	// 	noClass = select.children[0];
-	// 	A = select.children[1];
-	// 	B = select.children[2];
-	// 	console.log(A, B, noClass);
-
-	// 	console.log(A.value);
-	// 	console.log(cardClass.parentElement);
-
-	// 	if (select.children[1] = selected) {
-	// 		if (cardClass.textContent = '1IMA') {
-	// 			cardClass.parentElement.style.display = 'none';
-	// 		}
-
-	// 	}
-
-	// }
+	function intuitiveFilter() {
+		//   if the default filter value is selected => show all cards
+		if (select.value === 'all') {
+			wholeCard.forEach((card) => {
+				card.style.setProperty('display', 'grid');
+			});
+			console.log(select.value);
+		} else {
+			wholeCard.forEach((card) => {
+				//     if the value of the card and of the filter are different => hide the card
+				if (card.dataset.klasse != select.value) {
+					card.style.setProperty('display', 'none');
+				} else {
+					//     if both values are the same => show the card
+					card.style.setProperty('display', 'grid');
+				}
+				console.log(select.value);
+			});
+		}
+	}
 
 	let classTitleValue = wholeCard;
 	console.log(classTitleValue);
 
 	let selectedValue = select.options;
-	console.log(select.children[0].textContent = '');
+	console.log((select.children[0].textContent = ''));
 
 	// for (let i = 0; i < wholeCard.length; i++) {
 
@@ -67,7 +61,7 @@
 	// 		}
 
 	// 	} else if (wholeCard[i].children[2].textContent === '1IMB') {
-			
+
 	// 		if (select.children[0].textContent === '') {
 	// 			wholeCard[i].style.display = 'grid';
 
@@ -81,52 +75,6 @@
 
 	// 	// console.log(select.options[i].active);
 	// }
-
-	for (let i = 0; i < wholeCard.length; i++) {
-
-		if (select.children[0].activeElement === true) {
-			
-			wholeCard[i].children[2].textContent === '1IMA'
-				wholeCard[i].style.display = 'grid';			
-			
-
-		} else if (select.children[1].activeElement === true) {
-			
-			wholeCard[i].children[2].textContent === '1IMA'
-				wholeCard[i].style.display = 'grid';			
-			
-
-		} else if (select.children[2].activeElement === true) {
-
-			wholeCard[i].children[2].textContent === '1IMA'
-				wholeCard[i].style.display = 'none';			
-
-		}
-		
-
-		if (select.children[0].textContent === '') {
-
-				wholeCard[i].children[2].textContent === '1IMB'
-				wholeCard[i].style.display = 'grid';			
-		
-
-		} else if (select.children[0].textContent === 'A') {
-
-			wholeCard[i].children[2].textContent === '1IMB'
-				wholeCard[i].style.display = 'none';			
-			
-
-		} else if (select.children[0].textContent === 'B') {
-	
-			wholeCard[i].children[2].textContent === '1IMB'
-				wholeCard[i].style.display = 'grid';			
-		
-	
-		} 
-
-		console.log(select.children[i]);
-	}
-
 
 	// [].forEach.call(cardSection, (card) => {
 

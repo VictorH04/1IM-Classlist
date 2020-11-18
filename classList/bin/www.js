@@ -56,8 +56,6 @@ app.get('/api', (req, res) => {
 	res.sendFile(path.resolve('../classList/data.json'));
 });
 
-
-
 // app.get('/home', (req, res) => {
 // 	res.sendFile(tempHome);
 // });
