@@ -49,7 +49,6 @@ app.get('/klasseliste', (req, res) => {
 
 	res.end(output);
 
-	res.end('Hello Word from the server!');
 });
 
 app.get('/api', (req, res) => {
